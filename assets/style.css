@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,600;1,700&display=swap');
+
+:root {
+  --color-primary: #000;
+  --color-secondary: #9B9B9B;
+  --font-size-style-container: 1.5rem;
+  --font-size-author-info: 1rem;
+  --margin-size-author-info: 2rem;
+  --transition-default: all .1s ease-in-out;
+}
+
+/* Reset */
+body,
+p,
+h1,
+h2,
+a {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.flipper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'IBM Plex Mono', serif;
+  transition: var(--transition-default);
+}
+
+.flipper__header {
+  margin-top: var(--margin-size-author-info);
+}
+
+.flipper__header__text {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.flipper__header__text strong {
+  font-style: italic;
+}
+
+.flipper__main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.flipper__style-container {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  background-color: var(--color-primary);
+  padding: .5rem 1rem;
+  border-radius: .25rem;
+}
+
+.flipper__property {
+  font-weight: normal;
+  color: var(--color-secondary);
+  margin-right: .5rem;
+  font-size: var(--font-size-style-container);
+}
+
+.flipper__current-color {
+  color: #fff;
+  font-weight: 900;
+  font-style: italic;
+  font-size: var(--font-size-style-container);
+  transition: var(--transition-default);
+  text-transform: uppercase;
+}
+
+.flipper__change-button {
+  background-color: transparent;
+  font-size: calc(var(--font-size-style-container) - .5rem);
+  padding: .25rem .5rem;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: .25rem;
+  border-width: .15rem;
+  transition: var(--transition-default);
+}
+
+.flipper__change-button:hover {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+.flipper__container-footer {
+  margin-bottom: var(--margin-size-author-info);
+}
+
+.flipper__list {
+  display: flex;
+  gap: 1rem;
+}
+
+.flipper__list__item {
+  font-size: var(--font-size-author-info);
+  font-weight: 900;
+  text-decoration: none;
+  color: var(--color-primary);
+  padding: .25rem .5rem;
+  border: .15rem solid transparent;
+  border-radius: .25rem;
+  transition: var(--transition-default);
+}
+
+.flipper__list__item:hover {
+  border-color: var(--color-primary);
+}
