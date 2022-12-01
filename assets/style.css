@@ -86,8 +86,9 @@ ul {
   padding: .25rem .5rem;
   cursor: pointer;
   font-weight: 600;
+  border: none;
+  border: .15rem solid var(--color-primary);
   border-radius: .25rem;
-  border-width: .15rem;
   transition: var(--transition-default);
   outline: none;
 }
@@ -119,4 +120,22 @@ ul {
 
 .flipper__list__item:hover {
   border-color: var(--color-primary);
+}
+
+@media(max-width: 768px) {
+  .flipper__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+  }
+}
+
+@media(max-width: 500px) {
+  :root {
+    --font-size-style-container: 1.3rem;
+  }
+
+  .flipper__change-button {
+    font-size: calc(var(--font-size-style-container) - .25rem);
+  }
 }
