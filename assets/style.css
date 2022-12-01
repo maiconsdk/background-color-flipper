@@ -89,6 +89,7 @@ ul {
   border-radius: .25rem;
   border-width: .15rem;
   transition: var(--transition-default);
+  outline: none;
 }
 
 .flipper__change-button:hover {
