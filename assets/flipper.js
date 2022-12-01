@@ -10,6 +10,7 @@ window.onload = () => {
     let color = generateNewColor();
     document.body.style.backgroundColor = color;
     currentColor.innerText = color;
+    currentColor.style.color = color;
   }
 
   changeButton.addEventListener('click', getNewColor);
